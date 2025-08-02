@@ -1,0 +1,61 @@
+:root {
+  --matrix-txt: #ff69b4;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+body {
+  background: black;
+  color: var(--matrix-txt);
+  font-family: 'Poppins', sans-serif;
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+}
+
+.Love__You {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  height: 100%;
+  font-weight: bold;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  animation: fall 8s linear infinite;
+}
+
+.word {
+  color: var(--matrix-txt);
+  font-size: 20px;
+  font-weight: bold;
+  text-shadow: 0 0 5px #ff69b4;
+  white-space: nowrap;
+  margin-bottom: 4px;
+}
+
+@keyframes fall {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(120vh); }
+}
+
+canvas#fireworks {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
